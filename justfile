@@ -20,6 +20,14 @@ run hw_name:
     @echo "==> Running homework '{{hw_name}}'..."
     @uv run --project {{hw_name}} {{hw_name}}
 
+# Runs a specific homework assignment in a container.
+#
+# Usage:
+#   just run-container hw02
+run-container hw_name:
+    @echo "==> Running homework '{{hw_name}}' in a container..."
+    @just uv run --project {{hw_name}} {{hw_name}}
+
 # Creates a clean copy of the repository in a specified directory
 # with a fresh git history.
 #
@@ -37,3 +45,22 @@ export path:
       git add . && \
       git commit -m "Initial commit" > /dev/null)
     @echo "--> Successfully created a clean repository in '{{path}}'."
+
+# Generates a PDF of all source and config files for a homework.
+#
+# Usage:
+#   just pdf hw02
+pdf hw_name:
+    @echo "==> Generating PDF for '{{hw_name}}'..."
+    @find {{hw_name}} \( -path '*/.venv' -o -path '*/__pycache__' -o -name '*~' \) -prune -o \( -name "*.py" -o -name "*.toml" \) | xargs a2ps -2 --media=letter -o {{hw_name}}.ps
+    @gs -sDEVICE=pdfwrite -sPAPERSIZE=letter -dPDFFitPage -sOutputFile={{hw_name}}.pdf -dNOPAUSE -dBATCH {{hw_name}}.ps `find {{hw_name}} \\( -path '*/.venv' -o -path '*/__pycache__' -o -name '*~' \\) -prune -o -name "*.pdf" -print` > /dev/null 2>&1
+    @rm {{hw_name}}.ps
+    @echo "==> PDF generated at '{{hw_name}}.pdf'"
+
+# Runs uv via Docker, with the current directory mounted.
+#
+# Usage:
+#   just uv --help
+#   just uv pip install numpy
+uv *args:
+    @docker run --rm -it -v "$(pwd)":/work -w /work ghcr.io/astral-sh/uv:debian uv {{args}}
