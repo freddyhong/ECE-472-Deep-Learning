@@ -1,0 +1,23 @@
+debug = false
+random_seed = 31415
+
+[model]
+num_input = 2
+num_output = 1
+hidden_layer_width = 1024
+num_hidden_layers = 3
+
+[data]
+n_points = 100
+n_laps = 2
+noise = 0.1
+
+[training]
+batch_size = 700
+num_iters = 2000
+learning_rate = 0.001
+
+[plotting]
+output_dir = "artifacts"
+figsize = [5, 3]
+dpi = 200
