@@ -1,0 +1,70 @@
+{"settings": {"debug": false, "random_seed": 31415, "model": {"input_depth": 1, "layer_depths": [16, 32], "blocks_per_stage": [1, 1], "num_classes": 10, "dropout": 0.2}, "data": {"batch_size": 32, "validation_size": 10000, "shuffle_buffer": 10000}, "training": {"num_epochs": 3, "learning_rate": 0.005, "weight_decay": 0.0001, "log_interval": 100}, "plotting": {"output_dir": "PosixPath('artifacts')", "figsize": [5, 3], "dpi": 200}}, "event": "Settings loaded", "logger": "hw03", "level": "info", "timestamp": "2025-09-25T02:07:48.522129Z"}
+{"event": "Variant folder /root/tensorflow_datasets/mnist/3.0.1 has no dataset_info.json"}
+{"event": "Generating dataset mnist (/root/tensorflow_datasets/mnist/3.0.1)"}
+{"event": "Downloading https://storage.googleapis.com/cvdf-datasets/mnist/t10k-images-idx3-ubyte.gz into /root/tensorflow_datasets/downloads/mnist/cvdf-datasets_mnist_t10k-images-idx3-ubytedDnaEPiC58ZczHNOp6ks9L4_JLids_rpvUj38kJNGMc.gz.tmp.585aa212f6fa475f9f15dc5b68fa15cb..."}
+{"event": "Downloading https://storage.googleapis.com/cvdf-datasets/mnist/t10k-labels-idx1-ubyte.gz into /root/tensorflow_datasets/downloads/mnist/cvdf-datasets_mnist_t10k-labels-idx1-ubyte4Mqf5UL1fRrpd5pIeeAh8c8ZzsY2gbIPBuKwiyfSD_I.gz.tmp.b7d62e358adf4378987a4a03fb02f668..."}
+{"event": "Downloading https://storage.googleapis.com/cvdf-datasets/mnist/train-images-idx3-ubyte.gz into /root/tensorflow_datasets/downloads/mnist/cvdf-datasets_mnist_train-images-idx3-ubyteJAsxAi0QnOBEygBw_XW2X7zp-LBZAIqqYSHN8ru4ZO4.gz.tmp.38fc58d802414ab482306728efbe75d0..."}
+{"event": "Downloading https://storage.googleapis.com/cvdf-datasets/mnist/train-labels-idx1-ubyte.gz into /root/tensorflow_datasets/downloads/mnist/cvdf-datasets_mnist_train-labels-idx1-ubytedcDWkl3FO9T-WMEH1f1Xt51eIRmePRIMAk6X147Qw8w.gz.tmp.1a7f3a45749a460b86aaddd869c7c5a3..."}
+{"event": "Done writing /root/tensorflow_datasets/mnist/incomplete.WZ3BFY_3.0.1/mnist-train.tfrecord*. Number of examples: 60000 (shards: [60000])"}
+{"event": "Done writing /root/tensorflow_datasets/mnist/incomplete.WZ3BFY_3.0.1/mnist-test.tfrecord*. Number of examples: 10000 (shards: [10000])"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/mnist/3.0.1."}
+{"event": "Constructing tf.data.Dataset mnist for split train, from /root/tensorflow_datasets/mnist/3.0.1"}
+{"event": "Load dataset info from /root/tensorflow_datasets/mnist/3.0.1"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/mnist/3.0.1."}
+{"event": "Constructing tf.data.Dataset mnist for split test, from /root/tensorflow_datasets/mnist/3.0.1"}
+{"event": "Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"}
+{"num_params": 19722, "event": "Model created", "logger": "hw03", "level": "info", "timestamp": "2025-09-25T02:08:09.157200Z"}
+{"epoch": 1, "step": 0, "loss": 2.538978099822998, "acc": 0.09375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:12.446197Z"}
+{"epoch": 1, "step": 100, "loss": 2.028336524963379, "acc": 0.125, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:15.838477Z"}
+{"epoch": 1, "step": 200, "loss": 1.4762825965881348, "acc": 0.46875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:18.981887Z"}
+{"epoch": 1, "step": 300, "loss": 1.838819980621338, "acc": 0.3125, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:21.913127Z"}
+{"epoch": 1, "step": 400, "loss": 1.0535175800323486, "acc": 0.65625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:25.291893Z"}
+{"epoch": 1, "step": 500, "loss": 1.158921480178833, "acc": 0.53125, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:29.203533Z"}
+{"epoch": 1, "step": 600, "loss": 0.8958538770675659, "acc": 0.5625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:33.340111Z"}
+{"epoch": 1, "step": 700, "loss": 1.1473503112792969, "acc": 0.6875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:37.707516Z"}
+{"epoch": 1, "step": 800, "loss": 0.5245754718780518, "acc": 0.78125, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:42.157514Z"}
+{"epoch": 1, "step": 900, "loss": 0.4066757261753082, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:46.768054Z"}
+{"epoch": 1, "step": 1000, "loss": 0.4078470468521118, "acc": 0.84375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:51.460418Z"}
+{"epoch": 1, "step": 1100, "loss": 0.24065490067005157, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:08:56.205368Z"}
+{"epoch": 1, "step": 1200, "loss": 0.4178001284599304, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:01.311952Z"}
+{"epoch": 1, "step": 1300, "loss": 0.31115055084228516, "acc": 0.875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:06.309855Z"}
+{"epoch": 1, "step": 1400, "loss": 0.29164016246795654, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:11.258503Z"}
+{"epoch": 1, "step": 1500, "loss": 0.29139769077301025, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:16.215563Z"}
+{"epoch": 1, "step": 1563, "val_loss": 0.30389410909562825, "val_acc": 0.9019568690095847, "event": "epoch_summary", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:34.996285Z"}
+{"epoch": 2, "step": 1600, "loss": 0.3914353549480438, "acc": 0.84375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:37.786850Z"}
+{"epoch": 2, "step": 1700, "loss": 0.24718624353408813, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:42.108987Z"}
+{"epoch": 2, "step": 1800, "loss": 0.4984695613384247, "acc": 0.84375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:46.611778Z"}
+{"epoch": 2, "step": 1900, "loss": 0.2861315608024597, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:51.110826Z"}
+{"epoch": 2, "step": 2000, "loss": 0.14241105318069458, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:09:55.552855Z"}
+{"epoch": 2, "step": 2100, "loss": 0.2858550548553467, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:00.053447Z"}
+{"epoch": 2, "step": 2200, "loss": 0.06083556264638901, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:04.499250Z"}
+{"epoch": 2, "step": 2300, "loss": 0.19406363368034363, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:08.978488Z"}
+{"epoch": 2, "step": 2400, "loss": 0.08005142211914062, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:13.494265Z"}
+{"epoch": 2, "step": 2500, "loss": 0.18751657009124756, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:17.805327Z"}
+{"epoch": 2, "step": 2600, "loss": 0.26830390095710754, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:22.037843Z"}
+{"epoch": 2, "step": 2700, "loss": 0.21286556124687195, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:26.305835Z"}
+{"epoch": 2, "step": 2800, "loss": 0.3422226309776306, "acc": 0.84375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:30.701704Z"}
+{"epoch": 2, "step": 2900, "loss": 0.2789686918258667, "acc": 0.875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:35.306584Z"}
+{"epoch": 2, "step": 3000, "loss": 0.4412480592727661, "acc": 0.875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:40.052853Z"}
+{"epoch": 2, "step": 3100, "loss": 0.1342550665140152, "acc": 0.96875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:44.749327Z"}
+{"epoch": 2, "step": 3126, "val_loss": 0.16497566046330114, "val_acc": 0.950479233226837, "event": "epoch_summary", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:10:56.240764Z"}
+{"epoch": 3, "step": 3200, "loss": 0.2555471956729889, "acc": 0.875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:00.780476Z"}
+{"epoch": 3, "step": 3300, "loss": 0.39086252450942993, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:05.014910Z"}
+{"epoch": 3, "step": 3400, "loss": 0.06019824743270874, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:09.379806Z"}
+{"epoch": 3, "step": 3500, "loss": 0.16334864497184753, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:13.633909Z"}
+{"epoch": 3, "step": 3600, "loss": 0.060306839644908905, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:17.993204Z"}
+{"epoch": 3, "step": 3700, "loss": 0.1764403134584427, "acc": 0.96875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:22.038726Z"}
+{"epoch": 3, "step": 3800, "loss": 0.10806598514318466, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:26.221545Z"}
+{"epoch": 3, "step": 3900, "loss": 0.18277491629123688, "acc": 0.90625, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:31.095782Z"}
+{"epoch": 3, "step": 4000, "loss": 0.274816632270813, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:35.564553Z"}
+{"epoch": 3, "step": 4100, "loss": 0.1901731938123703, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:40.041957Z"}
+{"epoch": 3, "step": 4200, "loss": 0.11744438856840134, "acc": 0.96875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:44.686833Z"}
+{"epoch": 3, "step": 4300, "loss": 0.07564717531204224, "acc": 0.96875, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:49.304296Z"}
+{"epoch": 3, "step": 4400, "loss": 0.1251562535762787, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:54.006251Z"}
+{"epoch": 3, "step": 4500, "loss": 0.07822797447443008, "acc": 1.0, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:11:58.744469Z"}
+{"epoch": 3, "step": 4600, "loss": 0.11893424391746521, "acc": 0.9375, "event": "train_iter", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:12:03.439134Z"}
+{"epoch": 3, "step": 4689, "val_loss": 0.1339081363460888, "val_acc": 0.959564696485623, "event": "epoch_summary", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:12:16.610756Z"}
+{"event": "Training finished. Generating final plots...", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:12:16.611829Z"}
+{"event": "Starting final testing...", "logger": "hw03", "level": "info", "timestamp": "2025-09-25T02:12:17.183976Z"}
+{"test_loss": 0.1314426691482623, "test_acc": 0.959564696485623, "event": "test_results", "logger": "hw03.training", "level": "info", "timestamp": "2025-09-25T02:12:26.280264Z"}
+{"test_loss": 0.1314426691482623, "test_acc": 0.959564696485623, "event": "Final Test Results", "logger": "hw03", "level": "info", "timestamp": "2025-09-25T02:12:27.797058Z"}

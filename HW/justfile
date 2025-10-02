@@ -52,7 +52,7 @@ export path:
 #   just pdf hw02
 pdf hw_name:
     @echo "==> Generating PDF for '{{hw_name}}'..."
-    @find {{hw_name}} \( -path '*/.venv' -o -path '*/__pycache__' -o -name '*~' \) -prune -o \( -name "*.py" -o -name "*.toml" \) | xargs a2ps -2 --media=letter -o {{hw_name}}.ps
+    @find {{hw_name}} \( -path '*/.venv' -o -path '*/__pycache__' -o -name '*~' \) -prune -o \( -name "*.py" -o -name "*.toml" -o -name "*.json" \) | xargs a2ps -2 --media=letter -o {{hw_name}}.ps
     @gs -sDEVICE=pdfwrite -sPAPERSIZE=letter -dPDFFitPage -sOutputFile={{hw_name}}.pdf -dNOPAUSE -dBATCH {{hw_name}}.ps `find {{hw_name}} \\( -path '*/.venv' -o -path '*/__pycache__' -o -name '*~' \\) -prune -o -name "*.pdf" -print` > /dev/null 2>&1
     @rm {{hw_name}}.ps
     @echo "==> PDF generated at '{{hw_name}}.pdf'"

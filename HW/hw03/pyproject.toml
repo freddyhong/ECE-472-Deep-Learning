@@ -1,0 +1,32 @@
+# pyproject.toml.jinja
+
+[project]
+name = "hw03"
+version = "0.1.0"
+description = "MNIST CNN"
+readme = "README.md"
+authors = [
+    { name = "Wongee (Freddy) Hong", email = "wongee.hong@cooper.edu" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "structlog",
+    "numpy",
+    "tensorflow",
+    "tensorflow_datasets",
+    "pydantic-settings",
+    "matplotlib",
+    "tqdm",
+    "jax",
+    "jaxlib",
+    "flax",
+    "optax",
+    "scikit-learn",
+]
+
+[project.scripts]
+hw03 = "hw03:main"
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"

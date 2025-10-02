@@ -1,0 +1,58 @@
+{"settings": {"debug": false, "random_seed": 31415, "model": {"input_depth": 3, "layer_depths": [16, 32], "blocks_per_stage": [4, 4], "num_classes": 10, "dropout": 0.3}, "data": {"batch_size": 64, "validation_size": 5000, "shuffle_buffer": 10000}, "training": {"num_epochs": 5, "learning_rate": 0.0005, "weight_decay": 0.0001, "log_interval": 100}, "plotting": {"output_dir": "PosixPath('artifacts')", "figsize": [5, 3], "dpi": 200}}, "event": "Settings loaded", "logger": "hw04", "level": "info", "timestamp": "2025-09-29T02:58:35.550556Z"}
+{"event": "Variant folder /root/tensorflow_datasets/cifar10/3.0.2 has no dataset_info.json"}
+{"event": "Generating dataset cifar10 (/root/tensorflow_datasets/cifar10/3.0.2)"}
+{"event": "Downloading https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz into /root/tensorflow_datasets/downloads/cifar10/cs.toronto.edu_kriz_cifar-10-binaryODHPtIjLh3oLcXirEISTO7dkzyKjRCuol6lV8Wc6C7s.tar.gz.tmp.8e18dc6345694dcd81a8b9369177d293..."}
+{"event": "Done writing /root/tensorflow_datasets/cifar10/incomplete.GSBF8X_3.0.2/cifar10-train.tfrecord*. Number of examples: 50000 (shards: [50000])"}
+{"event": "Done writing /root/tensorflow_datasets/cifar10/incomplete.GSBF8X_3.0.2/cifar10-test.tfrecord*. Number of examples: 10000 (shards: [10000])"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/cifar10/3.0.2."}
+{"event": "Constructing tf.data.Dataset cifar10 for split train, from /root/tensorflow_datasets/cifar10/3.0.2"}
+{"event": "Load dataset info from /root/tensorflow_datasets/cifar10/3.0.2"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/cifar10/3.0.2."}
+{"event": "Constructing tf.data.Dataset cifar10 for split test, from /root/tensorflow_datasets/cifar10/3.0.2"}
+{"event": "Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"}
+{"num_params": 89994, "event": "Model created", "logger": "hw04", "level": "info", "timestamp": "2025-09-29T03:03:19.914985Z"}
+{"epoch": 1, "step": 0, "loss": 2.402279853820801, "acc": 0.140625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:03:25.770817Z"}
+{"epoch": 1, "step": 100, "loss": 2.225611686706543, "acc": 0.125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:03:52.639402Z"}
+{"epoch": 1, "step": 200, "loss": 2.230090379714966, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:04:20.327410Z"}
+{"epoch": 1, "step": 300, "loss": 1.9989537000656128, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:04:48.963781Z"}
+{"epoch": 1, "step": 400, "loss": 1.7385671138763428, "acc": 0.390625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:05:20.549409Z"}
+{"epoch": 1, "step": 500, "loss": 1.877956748008728, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:05:52.058108Z"}
+{"epoch": 1, "step": 600, "loss": 1.885924220085144, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:06:22.365372Z"}
+{"epoch": 1, "step": 700, "loss": 1.874767541885376, "acc": 0.3125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:06:54.415655Z"}
+{"epoch": 1, "step": 704, "val_loss": 1.8716102702708184, "val_acc": 0.28045886075949367, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:07:15.896748Z"}
+{"epoch": 2, "step": 800, "loss": 2.009098529815674, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:07:43.960992Z"}
+{"epoch": 2, "step": 900, "loss": 1.6836700439453125, "acc": 0.328125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:08:12.767077Z"}
+{"epoch": 2, "step": 1000, "loss": 1.6162440776824951, "acc": 0.328125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:08:42.465761Z"}
+{"epoch": 2, "step": 1100, "loss": 1.6443754434585571, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:09:14.631499Z"}
+{"epoch": 2, "step": 1200, "loss": 1.7959755659103394, "acc": 0.34375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:09:45.949573Z"}
+{"epoch": 2, "step": 1300, "loss": 1.751318335533142, "acc": 0.25, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:10:15.542965Z"}
+{"epoch": 2, "step": 1400, "loss": 1.5826280117034912, "acc": 0.453125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:10:48.399538Z"}
+{"epoch": 2, "step": 1408, "val_loss": 1.7014583982998812, "val_acc": 0.3599683544303797, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:11:04.773848Z"}
+{"epoch": 3, "step": 1500, "loss": 1.5756173133850098, "acc": 0.375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:11:34.820989Z"}
+{"epoch": 3, "step": 1600, "loss": 1.6821258068084717, "acc": 0.328125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:12:04.833895Z"}
+{"epoch": 3, "step": 1700, "loss": 1.61085045337677, "acc": 0.4375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:12:33.025796Z"}
+{"epoch": 3, "step": 1800, "loss": 1.6485509872436523, "acc": 0.484375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:13:00.522747Z"}
+{"epoch": 3, "step": 1900, "loss": 1.602824091911316, "acc": 0.390625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:13:28.768792Z"}
+{"epoch": 3, "step": 2000, "loss": 1.5328500270843506, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:13:56.972132Z"}
+{"epoch": 3, "step": 2100, "loss": 1.5962920188903809, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:14:25.191176Z"}
+{"epoch": 3, "step": 2112, "val_loss": 1.5616746069509773, "val_acc": 0.4155458860759494, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:14:43.150536Z"}
+{"epoch": 4, "step": 2200, "loss": 1.7576022148132324, "acc": 0.328125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:15:10.806710Z"}
+{"epoch": 4, "step": 2300, "loss": 1.4017717838287354, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:15:39.649899Z"}
+{"epoch": 4, "step": 2400, "loss": 1.6081162691116333, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:16:07.235636Z"}
+{"epoch": 4, "step": 2500, "loss": 1.5316599607467651, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:16:36.607823Z"}
+{"epoch": 4, "step": 2600, "loss": 1.6192891597747803, "acc": 0.359375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:17:04.687538Z"}
+{"epoch": 4, "step": 2700, "loss": 1.3967716693878174, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:17:33.722685Z"}
+{"epoch": 4, "step": 2800, "loss": 1.74524986743927, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:18:01.737106Z"}
+{"epoch": 4, "step": 2816, "val_loss": 1.4900753332089773, "val_acc": 0.46143196202531644, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:18:19.459290Z"}
+{"epoch": 5, "step": 2900, "loss": 1.7572095394134521, "acc": 0.359375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:18:44.592595Z"}
+{"epoch": 5, "step": 3000, "loss": 1.2823601961135864, "acc": 0.453125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:19:12.459169Z"}
+{"epoch": 5, "step": 3100, "loss": 1.3929975032806396, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:19:40.570488Z"}
+{"epoch": 5, "step": 3200, "loss": 1.3653801679611206, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:20:10.130714Z"}
+{"epoch": 5, "step": 3300, "loss": 1.47598397731781, "acc": 0.4375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:20:41.089681Z"}
+{"epoch": 5, "step": 3400, "loss": 1.4691236019134521, "acc": 0.453125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:21:08.526232Z"}
+{"epoch": 5, "step": 3500, "loss": 1.4888986349105835, "acc": 0.5, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:21:36.888628Z"}
+{"epoch": 5, "step": 3520, "val_loss": 1.471568516538113, "val_acc": 0.471123417721519, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:21:55.933047Z"}
+{"event": "Training finished. Generating final plots...", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:21:55.933717Z"}
+{"event": "Starting final testing...", "logger": "hw04", "level": "info", "timestamp": "2025-09-29T03:21:56.692980Z"}
+{"test_loss": 1.4604166715767732, "test_acc": 0.4707404458598726, "event": "test_results", "logger": "hw04.training", "level": "info", "timestamp": "2025-09-29T03:22:26.260397Z"}
+{"test_loss": 1.4604166715767732, "test_acc": 0.4707404458598726, "event": "Final Test Results", "logger": "hw04", "level": "info", "timestamp": "2025-09-29T03:22:27.777594Z"}
