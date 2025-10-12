@@ -3,12 +3,13 @@ import structlog
 from flax import nnx
 import jax
 import pathlib as Path
+import orbax.checkpoint as ocp
 
 from .config import load_settings
 from .logging import configure_logging 
 from .model import Classifier
-from .training import train, test_evaluation
-from .data import load_CIFAR10
+from .training import train, test_evaluation, load_checkpoint
+from .data import load_CIFAR10, load_CIFAR100
 
 def main() -> None:
     settings = load_settings()
@@ -17,11 +18,17 @@ def main() -> None:
     log.info("Settings loaded", settings=settings.model_dump())
     print(f"Logs are being saved to {log_file}")
 
-    ds_train, ds_val, ds_test = load_CIFAR10(
+    if settings.data.cifar100:
+        ds_train, ds_val, ds_test = load_CIFAR100(
         batch_size=settings.data.batch_size,
         validation_size=settings.data.validation_size,
     )
-    rngs = nnx.Rngs(params=settings.random_seed, dropout=settings.random_seed + 1)
+    else:
+        ds_train, ds_val, ds_test = load_CIFAR10(
+            batch_size=settings.data.batch_size,
+            validation_size=settings.data.validation_size,
+        )
+    rngs = nnx.Rngs(params=settings.random_seed)
     model = Classifier(
         rngs=rngs,
         input_depth=settings.model.input_depth,
@@ -29,7 +36,6 @@ def main() -> None:
         blocks_per_stage=settings.model.blocks_per_stage,
         layer_kernel_sizes=[(3,3)] * len(settings.model.layer_depths), 
         num_classes=settings.model.num_classes,
-        dropout=settings.model.dropout,
     )
 
     params = nnx.state(model, nnx.Param) 
@@ -53,9 +59,26 @@ def main() -> None:
         wrt=nnx.Param,
     )
 
-    _ = train(model, optimizer, ds_train, ds_val, rngs)
+    if settings.training.final_test:
+        log.info("Starting final testing...")
 
-    # Test
-    log.info("Starting final testing...")
-    test_loss, test_acc = test_evaluation(model, ds_test, rngs)
-    log.info("Final Test Results", test_loss=test_loss, test_acc=test_acc)
+        model_kwargs = dict(
+            input_depth=settings.model.input_depth,
+            layer_depths=settings.model.layer_depths,
+            blocks_per_stage=settings.model.blocks_per_stage,
+            layer_kernel_sizes=[(3, 3)] * len(settings.model.layer_depths),
+            num_classes=settings.model.num_classes,
+        )
+
+        model = load_checkpoint(
+            Classifier,
+            model_kwargs
+        )
+
+        test_loss, test_acc = test_evaluation(model, ds_test, rngs)
+        log.info("Final Test Results", test_loss=test_loss, test_acc=test_acc)
+    else:
+        _ = train(model, optimizer, ds_train, ds_val, rngs)
+
+
+    

@@ -28,7 +28,7 @@ def custom_serializer_processor(logger, method_name, event_dict):
         event_dict[key] = value
     return event_dict
 
-def configure_logging(log_dir: Path = Path("artifacts"), log_name: str = "train.json"):
+def configure_logging(log_dir: Path = Path("hw04/artifacts"), log_name: str = "train.json"):
     log_dir.mkdir(parents=True, exist_ok=True)
     log_file = log_dir / log_name
     log_level = os.environ.get("LOG_LEVEL", "INFO").upper()

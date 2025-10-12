@@ -210,3 +210,6 @@ __marimo__/
 .DS_Store
 
 /Papers/
+
+checkpoints_cifar10/
+checkpoints_cifar100/

@@ -4,15 +4,19 @@ import optax
 from flax import nnx
 import matplotlib.pyplot as plt
 import structlog
+import orbax.checkpoint as ocp
+from pathlib import Path
+import os
 
 from .config import load_settings
 
 log = structlog.get_logger()
 
-def cross_entropy_loss(logits, labels):
-    return optax.softmax_cross_entropy_with_integer_labels(
-        logits, labels
-    ).mean()
+def cross_entropy_loss(logits, labels, num_classes, smoothing = 0.1):
+    one_hot = jax.nn.one_hot(labels, num_classes)
+    smoothed = one_hot * (1 - smoothing) + smoothing / num_classes # Implemeted label smoothing for CIFAR-100 training. 
+    loss = optax.softmax_cross_entropy(logits, smoothed).mean()
+    return loss
 
 
 def compute_accuracy(logits, labels):
@@ -21,10 +25,11 @@ def compute_accuracy(logits, labels):
 
 
 def _loss_fn(model, batch, rngs):
+    settings = load_settings()
     images, labels = batch
     labels = labels.ravel()
     logits = model(images, rngs=rngs)
-    loss = cross_entropy_loss(logits, labels)
+    loss = cross_entropy_loss(logits, labels, settings.model.num_classes)
     return loss, logits
 
 
@@ -59,6 +64,9 @@ def train(model, optimizer, train_ds, val_ds, rngs):
     settings = load_settings()
     output_dir = settings.plotting.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_dir = settings.training.checkpoint_dir.resolve()
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_dir = ocp.test_utils.erase_and_create_empty(checkpoint_dir)
 
     log_interval = settings.training.log_interval
     num_epochs = settings.training.num_epochs
@@ -73,6 +81,8 @@ def train(model, optimizer, train_ds, val_ds, rngs):
 }
 
     global_step = 0
+    best_val_acc = 0.0
+    best_ckpt_path = None
 
     for epoch in range(1, num_epochs + 1):
 
@@ -99,9 +109,21 @@ def train(model, optimizer, train_ds, val_ds, rngs):
                     acc=acc_val,
                 )
             global_step += 1
-
-   
+        
+        # Create checkpoint every 5 epoch. Compare with previous best validation accuracy and save best checkpoint.
         val_loss, val_acc = evaluate(model, val_ds, rngs)
+        if epoch % 5 == 0 or epoch == num_epochs:
+            checkpointer = ocp.StandardCheckpointer()
+            if val_acc > best_val_acc:
+                best_val_acc = val_acc
+                best_ckpt_path = checkpoint_dir / f"best_state_epoch_{epoch}"
+                _, state = nnx.split(model)
+                checkpointer.save(best_ckpt_path, state)
+            else:
+                _, state = nnx.split(model)
+                ckpt_path = checkpoint_dir / f"state_epoch_{epoch}"
+                checkpointer.save(ckpt_path, state)
+
         metrics_history["val_steps"].append(global_step)
         metrics_history["val_loss"].append(val_loss)
         metrics_history["val_accuracy"].append(val_acc)
@@ -113,7 +135,7 @@ def train(model, optimizer, train_ds, val_ds, rngs):
             val_loss=val_loss,
             val_acc=val_acc,
         )
-       
+
     log.info("Training finished. Generating final plots...")
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
     
@@ -150,18 +172,25 @@ def test_evaluation(model, test_ds, rngs):
     test_loss, test_acc = evaluate(model, test_ds, rngs)
     log.info("test_results", test_loss=test_loss, test_acc=test_acc)
 
-    test_batch = next(test_ds.as_numpy_iterator())
-    _, logits = eval_step(model, test_batch, rngs)
-    images, labels = test_batch
-    preds = jnp.argmax(logits, axis=-1)
-
-    fig, axs = plt.subplots(5, 5, figsize=(10, 10))
-    for i, ax in enumerate(axs.flatten()):
-        ax.imshow(images[i, ..., 0])
-        ax.set_title(f"pred={int(preds[i])}, label={int(labels[i])}")
-        ax.axis("off")
-    fig.tight_layout()
-    fig.savefig(output_dir / "test_predictions.png", dpi=settings.plotting.dpi)
-    plt.close(fig)
-
     return test_loss, test_acc
+
+def load_checkpoint(model_cls, model_kwargs: dict):
+    settings = load_settings()
+    checkpoint_dir = settings.training.checkpoint_dir.resolve()
+    checkpointer = ocp.StandardCheckpointer()
+
+    ckpts = sorted(checkpoint_dir.glob("best_state_epoch_*"), key=os.path.getmtime)
+    if not ckpts:
+        raise FileNotFoundError(f"No checkpoints found in {checkpoint_dir}")
+
+    latest_ckpt = ckpts[-1]
+    print(f"Loading checkpoint from: {latest_ckpt}")
+
+    abstract_model = nnx.eval_shape(lambda: model_cls(**model_kwargs, rngs=nnx.Rngs(0)))
+    graphdef, abstract_state = nnx.split(abstract_model)
+
+    # restore parameters
+    state_restored = checkpointer.restore(latest_ckpt, abstract_state)
+    model = nnx.merge(graphdef, state_restored)
+    print("Checkpoint successfully restored!")
+    return model

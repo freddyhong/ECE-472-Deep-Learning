@@ -1,3 +1,5 @@
+# Deleted dropout to implement checkpoint
+
 import jax
 import jax.numpy as jnp
 from flax import nnx
@@ -12,19 +14,16 @@ class Conv2d(nnx.Module):
         strides=(1, 1),
         padding="SAME",
         use_bias=True,
-        dropout=0.0,
         rngs: nnx.Rngs,
     ):
         self.conv = nnx.Conv(
             in_channels, out_channels, kernel_size,
             strides=strides, padding=padding, use_bias=use_bias, rngs=rngs
         )
-        self.dropout = nnx.Dropout(dropout, rngs=rngs) if dropout > 0.0 else None
+
 
     def __call__(self, x, *, rngs: nnx.Rngs):
         x = self.conv(x)
-        if self.dropout:
-            x = self.dropout(x, rngs=rngs)
         return x
 
 
@@ -36,23 +35,22 @@ class ResidualBlock(nnx.Module):
         out_channels: int,
         *,
         stride=(1, 1),
-        dropout=0.0,
         rngs: nnx.Rngs,
     ):
         self.norm1 = nnx.GroupNorm(num_features=in_channels, num_groups=8, rngs=rngs)
         self.conv1 = Conv2d(
             in_channels, out_channels, (3, 3),
-            strides=stride, dropout=dropout, rngs=rngs,
+            strides=stride, rngs=rngs,
         )
         self.norm2 = nnx.GroupNorm(num_features=out_channels, num_groups=8, rngs=rngs)
         self.conv2 = Conv2d(
             out_channels, out_channels, (3, 3),
-            strides=(1, 1), dropout=0.0, rngs=rngs,
+            strides=(1, 1), rngs=rngs,
         )
         self.shortcut = (
             Conv2d(
                 in_channels, out_channels, (1, 1),
-                strides=stride, dropout=0.0, rngs=rngs,
+                strides=stride, rngs=rngs,
             )
             if in_channels != out_channels or stride != (1, 1)
             else None
@@ -76,7 +74,6 @@ class ResidualStage(nnx.Module):
         in_channels: int,
         out_channels: int,
         num_blocks: int,
-        dropout: float,
         stride=(1, 1),
         *,
         rngs: nnx.Rngs,
@@ -87,7 +84,6 @@ class ResidualStage(nnx.Module):
                 in_channels,
                 out_channels,
                 stride=stride,
-                dropout=dropout,
                 rngs=rngs,
             )
         )
@@ -98,7 +94,6 @@ class ResidualStage(nnx.Module):
                     out_channels,
                     out_channels,
                     stride=(1, 1),
-                    dropout=dropout,
                     rngs=rngs,
                 )
             )
@@ -121,13 +116,12 @@ class Classifier(nnx.Module):
         num_classes: int,
         *,
         rngs: nnx.Rngs,
-        dropout: float = 0.1,
     ):
         assert len(layer_depths) == len(layer_kernel_sizes), \
             "layer_depths and layer_kernel_sizes must match in length"
         self.init_conv = Conv2d(input_depth, layer_depths[0],
                                 kernel_size=layer_kernel_sizes[0],
-                                strides=(1, 1), dropout=dropout, rngs=rngs)
+                                strides=(1, 1), rngs=rngs)
 
         # Build stages
         stages = []
@@ -143,7 +137,6 @@ class Classifier(nnx.Module):
                 out_channels=out_ch,
                 num_blocks=num_blocks,
                 stride=stride,
-                dropout=dropout,
                 rngs=rngs,
             )
             stages.append(stage)

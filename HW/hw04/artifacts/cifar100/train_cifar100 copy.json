@@ -1,0 +1,513 @@
+{"settings": {"debug": false, "random_seed": 31415, "model": {"input_depth": 3, "layer_depths": [32, 64, 128, 256], "blocks_per_stage": [3, 4, 6, 3], "num_classes": 100}, "data": {"batch_size": 64, "validation_size": 5000, "shuffle_buffer": 10000, "cifar100": true}, "training": {"num_epochs": 40, "learning_rate": 0.001, "weight_decay": 0.0001, "log_interval": 100, "final_test": false, "checkpoint_dir": "PosixPath('hw04/checkpoints')"}, "plotting": {"output_dir": "PosixPath('hw04/artifacts')", "figsize": [5, 3], "dpi": 200}}, "event": "Settings loaded", "logger": "hw04", "level": "info", "timestamp": "2025-10-08T02:03:14.897531Z"}
+{"event": "Variant folder /root/tensorflow_datasets/cifar100/3.0.2 has no dataset_info.json"}
+{"event": "Generating dataset cifar100 (/root/tensorflow_datasets/cifar100/3.0.2)"}
+{"event": "Downloading https://www.cs.toronto.edu/~kriz/cifar-100-binary.tar.gz into /root/tensorflow_datasets/downloads/cifar100/cs.toronto.edu_kriz_cifar-100-binaryzK0jb7CkNxmV4pH2clu5WdAlIotsPlZhrMxx9-DELEk.tar.gz.tmp.05f7acbe3c27433ab9d9a7be715a262a..."}
+{"event": "Done writing /root/tensorflow_datasets/cifar100/incomplete.CJ1809_3.0.2/cifar100-train.tfrecord*. Number of examples: 50000 (shards: [50000])"}
+{"event": "Done writing /root/tensorflow_datasets/cifar100/incomplete.CJ1809_3.0.2/cifar100-test.tfrecord*. Number of examples: 10000 (shards: [10000])"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/cifar100/3.0.2."}
+{"event": "Constructing tf.data.Dataset cifar100 for split train, from /root/tensorflow_datasets/cifar100/3.0.2"}
+{"event": "Load dataset info from /root/tensorflow_datasets/cifar100/3.0.2"}
+{"event": "Creating a tf.data.Dataset reading 1 files located in folders: /root/tensorflow_datasets/cifar100/3.0.2."}
+{"event": "Constructing tf.data.Dataset cifar100 for split test, from /root/tensorflow_datasets/cifar100/3.0.2"}
+{"event": "Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"}
+{"num_params": 5352484, "event": "Model created", "logger": "hw04", "level": "info", "timestamp": "2025-10-08T02:04:23.076490Z"}
+{"epoch": 1, "step": 0, "loss": 6.293019771575928, "acc": 0.0, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:04:29.419477Z"}
+{"epoch": 1, "step": 100, "loss": 4.514740943908691, "acc": 0.03125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:05:28.438838Z"}
+{"epoch": 1, "step": 200, "loss": 4.592070579528809, "acc": 0.046875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:06:28.673199Z"}
+{"epoch": 1, "step": 300, "loss": 4.353163719177246, "acc": 0.03125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:07:31.166671Z"}
+{"epoch": 1, "step": 400, "loss": 4.1630377769470215, "acc": 0.109375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:08:38.420678Z"}
+{"epoch": 1, "step": 500, "loss": 4.1404619216918945, "acc": 0.109375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:09:48.159711Z"}
+{"epoch": 1, "step": 600, "loss": 4.113791465759277, "acc": 0.09375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:10:56.193240Z"}
+{"epoch": 1, "step": 700, "loss": 4.152203559875488, "acc": 0.078125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:12:22.688554Z"}
+{"epoch": 1, "step": 704, "val_loss": 3.976373268079154, "val_acc": 0.10977056962025317, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:12:48.870353Z"}
+{"epoch": 2, "step": 800, "loss": 3.9205470085144043, "acc": 0.109375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:14:02.459500Z"}
+{"epoch": 2, "step": 900, "loss": 3.840639114379883, "acc": 0.171875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:15:17.498460Z"}
+{"epoch": 2, "step": 1000, "loss": 3.7243175506591797, "acc": 0.109375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:16:32.150840Z"}
+{"epoch": 2, "step": 1100, "loss": 4.04226541519165, "acc": 0.078125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:18:00.288914Z"}
+{"epoch": 2, "step": 1200, "loss": 3.8441624641418457, "acc": 0.078125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:19:28.517041Z"}
+{"epoch": 2, "step": 1300, "loss": 3.8282670974731445, "acc": 0.171875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:21:02.132235Z"}
+{"epoch": 2, "step": 1400, "loss": 3.7201836109161377, "acc": 0.171875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:22:34.578855Z"}
+{"epoch": 2, "step": 1408, "val_loss": 3.725985680954366, "val_acc": 0.16455696202531644, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:23:02.027043Z"}
+{"epoch": 3, "step": 1500, "loss": 3.5632882118225098, "acc": 0.234375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:24:31.804770Z"}
+{"epoch": 3, "step": 1600, "loss": 3.754606008529663, "acc": 0.1875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:26:05.243189Z"}
+{"epoch": 3, "step": 1700, "loss": 3.57137393951416, "acc": 0.15625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:27:44.340479Z"}
+{"epoch": 3, "step": 1800, "loss": 3.5107321739196777, "acc": 0.25, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:29:24.400883Z"}
+{"epoch": 3, "step": 1900, "loss": 3.6451330184936523, "acc": 0.171875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:31:53.011601Z"}
+{"epoch": 3, "step": 2000, "loss": 3.608765125274658, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:33:30.689234Z"}
+{"epoch": 3, "step": 2100, "loss": 3.434713125228882, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:35:17.867518Z"}
+{"epoch": 3, "step": 2112, "val_loss": 3.4336151533488986, "val_acc": 0.2232990506329114, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:35:52.401048Z"}
+{"epoch": 4, "step": 2200, "loss": 3.715132236480713, "acc": 0.203125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:37:20.644353Z"}
+{"epoch": 4, "step": 2300, "loss": 3.4648847579956055, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:39:04.690766Z"}
+{"epoch": 4, "step": 2400, "loss": 3.307539224624634, "acc": 0.234375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:40:54.072164Z"}
+{"epoch": 4, "step": 2500, "loss": 3.1671979427337646, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:42:49.909699Z"}
+{"epoch": 4, "step": 2600, "loss": 3.3479247093200684, "acc": 0.265625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:44:42.317975Z"}
+{"epoch": 4, "step": 2700, "loss": 3.6466000080108643, "acc": 0.15625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:46:32.385703Z"}
+{"epoch": 4, "step": 2800, "loss": 3.2055907249450684, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:48:17.587112Z"}
+{"epoch": 4, "step": 2816, "val_loss": 3.315141044085539, "val_acc": 0.24406645569620253, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:49:28.374315Z"}
+{"epoch": 5, "step": 2900, "loss": 3.227433681488037, "acc": 0.21875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:50:50.341523Z"}
+{"epoch": 5, "step": 3000, "loss": 3.102710008621216, "acc": 0.34375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:52:40.761303Z"}
+{"epoch": 5, "step": 3100, "loss": 3.1873788833618164, "acc": 0.265625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:54:34.502882Z"}
+{"epoch": 5, "step": 3200, "loss": 3.351025342941284, "acc": 0.265625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:56:31.247385Z"}
+{"epoch": 5, "step": 3300, "loss": 3.175706148147583, "acc": 0.328125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T02:58:19.107700Z"}
+{"epoch": 5, "step": 3400, "loss": 3.223763942718506, "acc": 0.28125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:00:23.153855Z"}
+{"epoch": 5, "step": 3500, "loss": 3.4645779132843018, "acc": 0.28125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:02:44.583483Z"}
+{"event": "orbax-checkpoint version: 0.11.25"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID."}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb04c384540> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_5."}
+{"event": "Using ThreadSafeKeyValueSignalingClient"}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp"}
+{"event": "Wrote Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1759892600315940606, 'commit_timestamp_nsecs': None, 'custom_metadata': {}}, json={\"item_handlers\": null, \"metrics\": {}, \"performance_metrics\": {}, \"init_timestamp_nsecs\": 1759892600315940606, \"commit_timestamp_nsecs\": null, \"custom_metadata\": {}} to /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp/_CHECKPOINT_METADATA"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.025554s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 150 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.188762s (batch_requests_ready=0.083366s, total_serialization_initiated=0.059008s, others=0.046388s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.405937s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_5."}
+{"epoch": 5, "step": 3520, "val_loss": 3.023668651339374, "val_acc": 0.3419699367088608, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:03:20.608685Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 0.885782s (commit=0.845047s, array_metadata_write=0.040735s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: a second) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 0.685450s."}
+{"event": "Read Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1759892600315940606, 'commit_timestamp_nsecs': None, 'custom_metadata': {}} from /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp/_CHECKPOINT_METADATA"}
+{"event": "Updated Metadata={'item_handlers': 'orbax.checkpoint._src.handlers.standard_checkpoint_handler.StandardCheckpointHandler', 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1759892600315940606, 'commit_timestamp_nsecs': None, 'custom_metadata': {}} to /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp/_CHECKPOINT_METADATA"}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.091112s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_5.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_5"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_5`."}
+{"event": "Finished async_save (blocking + background). Time taken: 1.210265s. directory=/work/hw04/checkpoints/best_state_epoch_5"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 0.811962s."}
+{"epoch": 6, "step": 3600, "loss": 3.1924691200256348, "acc": 0.28125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:04:46.105146Z"}
+{"epoch": 6, "step": 3700, "loss": 3.0974535942077637, "acc": 0.28125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:06:19.232415Z"}
+{"epoch": 6, "step": 3800, "loss": 2.88730788230896, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:07:56.495230Z"}
+{"epoch": 6, "step": 3900, "loss": 2.8239173889160156, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:09:34.071079Z"}
+{"epoch": 6, "step": 4000, "loss": 2.6792492866516113, "acc": 0.4375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:11:10.479639Z"}
+{"epoch": 6, "step": 4100, "loss": 2.9661216735839844, "acc": 0.34375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:12:47.475924Z"}
+{"epoch": 6, "step": 4200, "loss": 3.049795627593994, "acc": 0.3125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:14:28.252964Z"}
+{"epoch": 6, "step": 4224, "val_loss": 2.891840086707586, "val_acc": 0.3684731012658228, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:15:15.281783Z"}
+{"epoch": 7, "step": 4300, "loss": 2.9343090057373047, "acc": 0.3125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:16:26.503875Z"}
+{"epoch": 7, "step": 4400, "loss": 3.040593385696411, "acc": 0.34375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:18:03.417740Z"}
+{"epoch": 7, "step": 4500, "loss": 2.8881497383117676, "acc": 0.296875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:19:43.879640Z"}
+{"epoch": 7, "step": 4600, "loss": 2.6918036937713623, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:22:16.182252Z"}
+{"epoch": 7, "step": 4700, "loss": 2.876753091812134, "acc": 0.28125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:24:46.342072Z"}
+{"epoch": 7, "step": 4800, "loss": 2.809601068496704, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:27:17.897797Z"}
+{"epoch": 7, "step": 4900, "loss": 2.70047664642334, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:29:51.886695Z"}
+{"epoch": 7, "step": 4928, "val_loss": 2.80468063716647, "val_acc": 0.38904272151898733, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:30:54.135918Z"}
+{"epoch": 8, "step": 5000, "loss": 2.909195899963379, "acc": 0.390625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:32:06.961559Z"}
+{"epoch": 8, "step": 5100, "loss": 2.825591564178467, "acc": 0.390625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:33:52.181836Z"}
+{"epoch": 8, "step": 5200, "loss": 2.8924782276153564, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:35:35.179343Z"}
+{"epoch": 8, "step": 5300, "loss": 2.6524581909179688, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:37:15.284295Z"}
+{"epoch": 8, "step": 5400, "loss": 2.551236152648926, "acc": 0.453125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:38:52.454789Z"}
+{"epoch": 8, "step": 5500, "loss": 2.579155683517456, "acc": 0.484375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:41:04.767989Z"}
+{"epoch": 8, "step": 5600, "loss": 2.595737934112549, "acc": 0.4375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:42:40.910383Z"}
+{"epoch": 8, "step": 5632, "val_loss": 2.8846074689792682, "val_acc": 0.37539556962025317, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:43:39.004092Z"}
+{"epoch": 9, "step": 5700, "loss": 2.733125686645508, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:44:48.375567Z"}
+{"epoch": 9, "step": 5800, "loss": 2.7120447158813477, "acc": 0.3125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:46:26.841487Z"}
+{"epoch": 9, "step": 5900, "loss": 2.595057725906372, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:48:13.551083Z"}
+{"epoch": 9, "step": 6000, "loss": 2.3624320030212402, "acc": 0.546875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:49:56.963445Z"}
+{"epoch": 9, "step": 6100, "loss": 2.474496603012085, "acc": 0.484375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:52:17.585659Z"}
+{"epoch": 9, "step": 6200, "loss": 2.7093260288238525, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:54:21.554837Z"}
+{"epoch": 9, "step": 6300, "loss": 2.5347464084625244, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:56:06.278206Z"}
+{"epoch": 9, "step": 6336, "val_loss": 2.644265703008145, "val_acc": 0.4428401898734177, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:57:08.722001Z"}
+{"epoch": 10, "step": 6400, "loss": 2.6630876064300537, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T03:58:16.783040Z"}
+{"epoch": 10, "step": 6500, "loss": 2.5996267795562744, "acc": 0.5, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:00:09.979901Z"}
+{"epoch": 10, "step": 6600, "loss": 2.860553741455078, "acc": 0.40625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:02:10.701141Z"}
+{"epoch": 10, "step": 6700, "loss": 2.606689691543579, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:04:08.348364Z"}
+{"epoch": 10, "step": 6800, "loss": 2.6930508613586426, "acc": 0.421875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:06:07.913004Z"}
+{"epoch": 10, "step": 6900, "loss": 2.382720708847046, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:08:04.686791Z"}
+{"epoch": 10, "step": 7000, "loss": 2.303373336791992, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:09:55.812621Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb04c384fe0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_10."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_10.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.022823s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 134 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.142534s (batch_requests_ready=0.073546s, total_serialization_initiated=0.051219s, others=0.017769s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.287610s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_10."}
+{"epoch": 10, "step": 7040, "val_loss": 2.5681378705592097, "val_acc": 0.4622231012658228, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:11:06.506207Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_10.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 1.872959s (commit=1.681759s, array_metadata_write=0.191201s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 2 seconds) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 1.780473s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.172947s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_10.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_10.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_10"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_10`."}
+{"event": "Finished async_save (blocking + background). Time taken: 2.418191s. directory=/work/hw04/checkpoints/best_state_epoch_10"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 2.153387s."}
+{"epoch": 11, "step": 7100, "loss": 2.750136375427246, "acc": 0.375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:12:15.330662Z"}
+{"epoch": 11, "step": 7200, "loss": 2.6142709255218506, "acc": 0.453125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:14:00.556775Z"}
+{"epoch": 11, "step": 7300, "loss": 2.4533791542053223, "acc": 0.515625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:15:57.159949Z"}
+{"epoch": 11, "step": 7400, "loss": 2.291776418685913, "acc": 0.484375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:17:51.723849Z"}
+{"epoch": 11, "step": 7500, "loss": 2.484943389892578, "acc": 0.34375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:19:40.223592Z"}
+{"epoch": 11, "step": 7600, "loss": 2.2935128211975098, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:21:36.124683Z"}
+{"epoch": 11, "step": 7700, "loss": 2.4840097427368164, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:23:23.057783Z"}
+{"epoch": 11, "step": 7744, "val_loss": 2.513141556631161, "val_acc": 0.47072784810126583, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:24:44.379628Z"}
+{"epoch": 12, "step": 7800, "loss": 2.2476468086242676, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:25:40.154068Z"}
+{"epoch": 12, "step": 7900, "loss": 2.3320696353912354, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:27:28.425574Z"}
+{"epoch": 12, "step": 8000, "loss": 2.275804042816162, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:29:14.802233Z"}
+{"epoch": 12, "step": 8100, "loss": 2.2800588607788086, "acc": 0.578125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:31:00.382432Z"}
+{"epoch": 12, "step": 8200, "loss": 2.290487051010132, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:32:50.273658Z"}
+{"epoch": 12, "step": 8300, "loss": 2.6943180561065674, "acc": 0.375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:34:39.519771Z"}
+{"epoch": 12, "step": 8400, "loss": 2.3940651416778564, "acc": 0.578125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:36:24.706200Z"}
+{"epoch": 12, "step": 8448, "val_loss": 2.5028848678250855, "val_acc": 0.48279272151898733, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:37:42.487969Z"}
+{"epoch": 13, "step": 8500, "loss": 2.2315104007720947, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:38:33.083327Z"}
+{"epoch": 13, "step": 8600, "loss": 2.1777563095092773, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:40:28.425865Z"}
+{"epoch": 13, "step": 8700, "loss": 2.1291990280151367, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:42:37.112880Z"}
+{"epoch": 13, "step": 8800, "loss": 2.3664932250976562, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:44:21.670273Z"}
+{"epoch": 13, "step": 8900, "loss": 2.2685253620147705, "acc": 0.46875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:46:11.630998Z"}
+{"epoch": 13, "step": 9000, "loss": 2.0635430812835693, "acc": 0.578125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:48:07.148303Z"}
+{"epoch": 13, "step": 9100, "loss": 2.2765309810638428, "acc": 0.515625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:49:59.223506Z"}
+{"epoch": 13, "step": 9152, "val_loss": 2.4689806473406057, "val_acc": 0.48694620253164556, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:51:23.553805Z"}
+{"epoch": 14, "step": 9200, "loss": 2.5211524963378906, "acc": 0.5, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:52:15.724076Z"}
+{"epoch": 14, "step": 9300, "loss": 2.109415054321289, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:54:10.968057Z"}
+{"epoch": 14, "step": 9400, "loss": 2.193506956100464, "acc": 0.546875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:56:08.904093Z"}
+{"epoch": 14, "step": 9500, "loss": 2.106332778930664, "acc": 0.59375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T04:58:09.296852Z"}
+{"epoch": 14, "step": 9600, "loss": 2.258927822113037, "acc": 0.515625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:00:03.465827Z"}
+{"epoch": 14, "step": 9700, "loss": 2.232664108276367, "acc": 0.546875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:01:53.048158Z"}
+{"epoch": 14, "step": 9800, "loss": 1.9535751342773438, "acc": 0.671875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:03:45.975929Z"}
+{"epoch": 14, "step": 9856, "val_loss": 2.3596031695981567, "val_acc": 0.5245253164556962, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:05:20.270818Z"}
+{"epoch": 15, "step": 9900, "loss": 2.1425998210906982, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:06:06.722512Z"}
+{"epoch": 15, "step": 10000, "loss": 2.1782493591308594, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:08:03.356330Z"}
+{"epoch": 15, "step": 10100, "loss": 2.2716033458709717, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:10:04.344015Z"}
+{"epoch": 15, "step": 10200, "loss": 1.934844732284546, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:11:52.772141Z"}
+{"epoch": 15, "step": 10300, "loss": 1.943840503692627, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:13:45.025738Z"}
+{"epoch": 15, "step": 10400, "loss": 1.8722330331802368, "acc": 0.65625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:15:34.454109Z"}
+{"epoch": 15, "step": 10500, "loss": 2.0489859580993652, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:17:22.074564Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb04c2777e0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_15."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_15.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.078275s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 158 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.165144s (batch_requests_ready=0.030453s, total_serialization_initiated=0.117962s, others=0.016729s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.353670s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_15."}
+{"epoch": 15, "step": 10560, "val_loss": 2.3550007765806176, "val_acc": 0.528876582278481, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:18:59.185930Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_15.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 1.450688s (commit=1.395176s, array_metadata_write=0.055512s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: a second) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 1.284007s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.151441s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_15.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_15.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_15"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_15`."}
+{"event": "Finished async_save (blocking + background). Time taken: 2.545419s. directory=/work/hw04/checkpoints/best_state_epoch_15"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 2.200798s."}
+{"epoch": 16, "step": 10600, "loss": 2.0219409465789795, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:19:45.188950Z"}
+{"epoch": 16, "step": 10700, "loss": 1.9081127643585205, "acc": 0.609375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:21:39.841055Z"}
+{"epoch": 16, "step": 10800, "loss": 2.086942672729492, "acc": 0.53125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:23:26.768033Z"}
+{"epoch": 16, "step": 10900, "loss": 1.8919833898544312, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:25:25.513813Z"}
+{"epoch": 16, "step": 11000, "loss": 1.8039138317108154, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:27:10.769854Z"}
+{"epoch": 16, "step": 11100, "loss": 1.9021968841552734, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:28:51.840324Z"}
+{"epoch": 16, "step": 11200, "loss": 1.7849100828170776, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:30:29.863241Z"}
+{"epoch": 16, "step": 11264, "val_loss": 2.332110721853715, "val_acc": 0.5379746835443038, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:31:56.445378Z"}
+{"epoch": 17, "step": 11300, "loss": 2.4278204441070557, "acc": 0.5, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:32:29.041338Z"}
+{"epoch": 17, "step": 11400, "loss": 1.9701982736587524, "acc": 0.578125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:33:59.633723Z"}
+{"epoch": 17, "step": 11500, "loss": 1.9695223569869995, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:35:29.086338Z"}
+{"epoch": 17, "step": 11600, "loss": 1.8081365823745728, "acc": 0.671875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:36:50.858691Z"}
+{"epoch": 17, "step": 11700, "loss": 1.8532830476760864, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:38:17.241934Z"}
+{"epoch": 17, "step": 11800, "loss": 1.7858476638793945, "acc": 0.65625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:39:36.991791Z"}
+{"epoch": 17, "step": 11900, "loss": 2.0262157917022705, "acc": 0.578125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:40:53.493777Z"}
+{"epoch": 17, "step": 11968, "val_loss": 2.3060759547390517, "val_acc": 0.5399525316455697, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:42:01.686646Z"}
+{"epoch": 18, "step": 12000, "loss": 2.1541953086853027, "acc": 0.546875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:42:26.991727Z"}
+{"epoch": 18, "step": 12100, "loss": 1.9982845783233643, "acc": 0.59375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:43:40.246351Z"}
+{"epoch": 18, "step": 12200, "loss": 1.9845942258834839, "acc": 0.5625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:44:54.006460Z"}
+{"epoch": 18, "step": 12300, "loss": 2.2072534561157227, "acc": 0.59375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:46:06.017281Z"}
+{"epoch": 18, "step": 12400, "loss": 1.6721937656402588, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:47:17.964478Z"}
+{"epoch": 18, "step": 12500, "loss": 1.924797773361206, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:48:27.335253Z"}
+{"epoch": 18, "step": 12600, "loss": 1.895101547241211, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:49:37.582857Z"}
+{"epoch": 18, "step": 12672, "val_loss": 2.2927366072618507, "val_acc": 0.553006329113924, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:50:42.273608Z"}
+{"epoch": 19, "step": 12700, "loss": 1.9475072622299194, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:51:02.435902Z"}
+{"epoch": 19, "step": 12800, "loss": 1.769690990447998, "acc": 0.71875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:52:10.808877Z"}
+{"epoch": 19, "step": 12900, "loss": 2.0252304077148438, "acc": 0.609375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:54:11.294735Z"}
+{"epoch": 19, "step": 13000, "loss": 1.8518855571746826, "acc": 0.671875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:55:47.776089Z"}
+{"epoch": 19, "step": 13100, "loss": 1.81764554977417, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:57:29.068615Z"}
+{"epoch": 19, "step": 13200, "loss": 1.8731122016906738, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T05:59:02.607429Z"}
+{"epoch": 19, "step": 13300, "loss": 1.9309269189834595, "acc": 0.65625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:00:37.375569Z"}
+{"epoch": 19, "step": 13376, "val_loss": 2.25943695442586, "val_acc": 0.5619066455696202, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:02:30.057835Z"}
+{"epoch": 20, "step": 13400, "loss": 1.6295832395553589, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:02:49.812322Z"}
+{"epoch": 20, "step": 13500, "loss": 1.7931567430496216, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:04:27.964713Z"}
+{"epoch": 20, "step": 13600, "loss": 1.6699402332305908, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:06:22.091231Z"}
+{"epoch": 20, "step": 13700, "loss": 1.5388928651809692, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:07:50.223354Z"}
+{"epoch": 20, "step": 13800, "loss": 1.7932193279266357, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:09:12.897210Z"}
+{"epoch": 20, "step": 13900, "loss": 1.8351547718048096, "acc": 0.640625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:10:32.312477Z"}
+{"epoch": 20, "step": 14000, "loss": 2.0146117210388184, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:12:11.435054Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb050280180> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_20."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_20.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.022500s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 157 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.187761s (batch_requests_ready=0.085531s, total_serialization_initiated=0.062933s, others=0.039297s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.302445s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_20."}
+{"epoch": 20, "step": 14080, "val_loss": 2.2340246137184434, "val_acc": 0.5771360759493671, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:13:47.481533Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_20.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 2.802541s (commit=2.490904s, array_metadata_write=0.311636s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 2 seconds) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 2.713449s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.245968s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_20.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_20.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_20"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_20`."}
+{"event": "Finished async_save (blocking + background). Time taken: 3.616410s. directory=/work/hw04/checkpoints/best_state_epoch_20"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 3.305567s."}
+{"epoch": 21, "step": 14100, "loss": 1.6671950817108154, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:14:13.734406Z"}
+{"epoch": 21, "step": 14200, "loss": 1.6065789461135864, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:15:40.217343Z"}
+{"epoch": 21, "step": 14300, "loss": 1.811803936958313, "acc": 0.65625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:17:06.842911Z"}
+{"epoch": 21, "step": 14400, "loss": 1.8983824253082275, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:18:23.148189Z"}
+{"epoch": 21, "step": 14500, "loss": 1.6520131826400757, "acc": 0.71875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:19:34.007656Z"}
+{"epoch": 21, "step": 14600, "loss": 1.764165997505188, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:20:53.238319Z"}
+{"epoch": 21, "step": 14700, "loss": 1.7388876676559448, "acc": 0.71875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:22:18.238901Z"}
+{"epoch": 21, "step": 14784, "val_loss": 2.243983276282685, "val_acc": 0.5674446202531646, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:23:34.818738Z"}
+{"epoch": 22, "step": 14800, "loss": 1.9740406274795532, "acc": 0.625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:23:47.049240Z"}
+{"epoch": 22, "step": 14900, "loss": 1.6793556213378906, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:25:04.928431Z"}
+{"epoch": 22, "step": 15000, "loss": 1.5751006603240967, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:26:18.646325Z"}
+{"epoch": 22, "step": 15100, "loss": 1.7480489015579224, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:27:33.273630Z"}
+{"epoch": 22, "step": 15200, "loss": 1.6014894247055054, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:29:09.526977Z"}
+{"epoch": 22, "step": 15300, "loss": 1.8183097839355469, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:30:23.794939Z"}
+{"epoch": 22, "step": 15400, "loss": 1.6560078859329224, "acc": 0.703125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:31:39.041203Z"}
+{"epoch": 22, "step": 15488, "val_loss": 2.2258135306684275, "val_acc": 0.5797072784810127, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:32:59.383679Z"}
+{"epoch": 23, "step": 15500, "loss": 1.7419265508651733, "acc": 0.6875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:33:09.709366Z"}
+{"epoch": 23, "step": 15600, "loss": 1.4238574504852295, "acc": 0.78125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:34:27.115905Z"}
+{"epoch": 23, "step": 15700, "loss": 1.5187811851501465, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:35:46.041863Z"}
+{"epoch": 23, "step": 15800, "loss": 1.7028961181640625, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:37:02.880400Z"}
+{"epoch": 23, "step": 15900, "loss": 1.6384987831115723, "acc": 0.78125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:38:16.531577Z"}
+{"epoch": 23, "step": 16000, "loss": 1.5828403234481812, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:39:32.661741Z"}
+{"epoch": 23, "step": 16100, "loss": 1.5313999652862549, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:40:50.236241Z"}
+{"epoch": 23, "step": 16192, "val_loss": 2.222693950315065, "val_acc": 0.5787183544303798, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:42:14.872808Z"}
+{"epoch": 24, "step": 16200, "loss": 1.5467627048492432, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:42:22.231351Z"}
+{"epoch": 24, "step": 16300, "loss": 1.7322206497192383, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:44:11.483203Z"}
+{"epoch": 24, "step": 16400, "loss": 1.4591619968414307, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:45:26.621372Z"}
+{"epoch": 24, "step": 16500, "loss": 1.7354830503463745, "acc": 0.71875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:46:42.118081Z"}
+{"epoch": 24, "step": 16600, "loss": 1.6303048133850098, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:47:58.400378Z"}
+{"epoch": 24, "step": 16700, "loss": 1.536126732826233, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:49:34.827759Z"}
+{"epoch": 24, "step": 16800, "loss": 1.5406099557876587, "acc": 0.75, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:51:03.672243Z"}
+{"epoch": 24, "step": 16896, "val_loss": 2.243938494332229, "val_acc": 0.5801028481012658, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:52:52.934472Z"}
+{"epoch": 25, "step": 16900, "loss": 1.5582383871078491, "acc": 0.78125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:52:57.054962Z"}
+{"epoch": 25, "step": 17000, "loss": 1.742875337600708, "acc": 0.71875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:54:12.828674Z"}
+{"epoch": 25, "step": 17100, "loss": 1.5195224285125732, "acc": 0.796875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:55:33.552719Z"}
+{"epoch": 25, "step": 17200, "loss": 1.4775512218475342, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:56:50.362267Z"}
+{"epoch": 25, "step": 17300, "loss": 1.3745877742767334, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:58:21.180197Z"}
+{"epoch": 25, "step": 17400, "loss": 1.3794587850570679, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T06:59:41.440882Z"}
+{"epoch": 25, "step": 17500, "loss": 1.6095287799835205, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:01:06.710231Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb04c384fe0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_25."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_25.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.025894s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 70 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.084309s (batch_requests_ready=0.020728s, total_serialization_initiated=0.048920s, others=0.014661s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.174913s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_25."}
+{"epoch": 25, "step": 17600, "val_loss": 2.224066859559168, "val_acc": 0.584256329113924, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:02:52.741474Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_25.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 1.882184s (commit=1.838037s, array_metadata_write=0.044147s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: a second) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 1.803539s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.082424s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_25.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_25.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_25"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_25`."}
+{"event": "Finished async_save (blocking + background). Time taken: 2.093033s. directory=/work/hw04/checkpoints/best_state_epoch_25"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 1.919405s."}
+{"epoch": 26, "step": 17600, "loss": 1.568738341331482, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:02:55.944406Z"}
+{"epoch": 26, "step": 17700, "loss": 1.3991131782531738, "acc": 0.828125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:04:13.869568Z"}
+{"epoch": 26, "step": 17800, "loss": 1.338420033454895, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:05:35.352519Z"}
+{"epoch": 26, "step": 17900, "loss": 1.4250624179840088, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:06:52.142676Z"}
+{"epoch": 26, "step": 18000, "loss": 1.2783235311508179, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:08:09.305526Z"}
+{"epoch": 26, "step": 18100, "loss": 1.3806357383728027, "acc": 0.828125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:09:30.680198Z"}
+{"epoch": 26, "step": 18200, "loss": 1.399889588356018, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:11:09.550603Z"}
+{"epoch": 26, "step": 18300, "loss": 1.5994908809661865, "acc": 0.734375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:12:41.811454Z"}
+{"epoch": 26, "step": 18304, "val_loss": 2.2172716629656057, "val_acc": 0.5909810126582279, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:13:10.497284Z"}
+{"epoch": 27, "step": 18400, "loss": 1.4464119672775269, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:14:42.460929Z"}
+{"epoch": 27, "step": 18500, "loss": 1.3597071170806885, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:16:01.915436Z"}
+{"epoch": 27, "step": 18600, "loss": 1.38191819190979, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:17:21.175415Z"}
+{"epoch": 27, "step": 18700, "loss": 1.4169678688049316, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:18:35.391376Z"}
+{"epoch": 27, "step": 18800, "loss": 1.4206568002700806, "acc": 0.765625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:19:55.261979Z"}
+{"epoch": 27, "step": 18900, "loss": 1.4683144092559814, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:21:09.022721Z"}
+{"epoch": 27, "step": 19000, "loss": 1.3884514570236206, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:22:29.365504Z"}
+{"epoch": 27, "step": 19008, "val_loss": 2.2137932611417166, "val_acc": 0.5909810126582279, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:22:51.116493Z"}
+{"epoch": 28, "step": 19100, "loss": 1.4394699335098267, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:24:02.403225Z"}
+{"epoch": 28, "step": 19200, "loss": 1.366148829460144, "acc": 0.828125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:25:21.760414Z"}
+{"epoch": 28, "step": 19300, "loss": 1.5678846836090088, "acc": 0.78125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:26:38.079614Z"}
+{"epoch": 28, "step": 19400, "loss": 1.2182936668395996, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:27:56.105220Z"}
+{"epoch": 28, "step": 19500, "loss": 1.3144590854644775, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:29:09.510884Z"}
+{"epoch": 28, "step": 19600, "loss": 1.3808691501617432, "acc": 0.84375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:30:26.138867Z"}
+{"epoch": 28, "step": 19700, "loss": 1.272031545639038, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:31:40.389071Z"}
+{"epoch": 28, "step": 19712, "val_loss": 2.216762476329562, "val_acc": 0.5923655063291139, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:32:24.958280Z"}
+{"epoch": 29, "step": 19800, "loss": 1.3820842504501343, "acc": 0.828125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:33:35.224158Z"}
+{"epoch": 29, "step": 19900, "loss": 1.175877571105957, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:34:52.705303Z"}
+{"epoch": 29, "step": 20000, "loss": 1.3083802461624146, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:36:13.497219Z"}
+{"epoch": 29, "step": 20100, "loss": 1.3271234035491943, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:37:34.932730Z"}
+{"epoch": 29, "step": 20200, "loss": 1.1970949172973633, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:38:55.136839Z"}
+{"epoch": 29, "step": 20300, "loss": 1.348176121711731, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:40:22.408460Z"}
+{"epoch": 29, "step": 20400, "loss": 1.3527016639709473, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:41:46.632569Z"}
+{"epoch": 29, "step": 20416, "val_loss": 2.2051513798629183, "val_acc": 0.5986946202531646, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:42:18.802216Z"}
+{"epoch": 30, "step": 20500, "loss": 1.3500173091888428, "acc": 0.890625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:43:28.044207Z"}
+{"epoch": 30, "step": 20600, "loss": 1.2993791103363037, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:44:53.208264Z"}
+{"epoch": 30, "step": 20700, "loss": 1.2495979070663452, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:46:23.942535Z"}
+{"epoch": 30, "step": 20800, "loss": 1.2470132112503052, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:47:53.258421Z"}
+{"epoch": 30, "step": 20900, "loss": 1.2294142246246338, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:49:09.874969Z"}
+{"epoch": 30, "step": 21000, "loss": 1.3544175624847412, "acc": 0.8125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:50:32.795646Z"}
+{"epoch": 30, "step": 21100, "loss": 1.17897367477417, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:51:52.052347Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb04c3844a0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_30."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_30.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.022672s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 111 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.135971s (batch_requests_ready=0.018564s, total_serialization_initiated=0.092052s, others=0.025355s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.203821s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_30."}
+{"epoch": 30, "step": 21120, "val_loss": 2.2079105467735967, "val_acc": 0.599881329113924, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:52:27.256982Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_30.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 0.761419s (commit=0.725537s, array_metadata_write=0.035882s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 883 milliseconds) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 0.688953s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.072163s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_30.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_30.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_30"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_30`."}
+{"event": "Finished async_save (blocking + background). Time taken: 1.108641s. directory=/work/hw04/checkpoints/best_state_epoch_30"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 0.928715s."}
+{"epoch": 31, "step": 21200, "loss": 1.3140567541122437, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:53:31.274001Z"}
+{"epoch": 31, "step": 21300, "loss": 1.247022271156311, "acc": 0.890625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:54:52.271834Z"}
+{"epoch": 31, "step": 21400, "loss": 1.2459090948104858, "acc": 0.90625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:56:14.005328Z"}
+{"epoch": 31, "step": 21500, "loss": 1.2716195583343506, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:57:34.738497Z"}
+{"epoch": 31, "step": 21600, "loss": 1.186248779296875, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T07:58:54.769418Z"}
+{"epoch": 31, "step": 21700, "loss": 1.2186170816421509, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:00:22.070894Z"}
+{"epoch": 31, "step": 21800, "loss": 1.1592451333999634, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:01:44.235071Z"}
+{"epoch": 31, "step": 21824, "val_loss": 2.1937194051621836, "val_acc": 0.6050237341772152, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:02:25.895055Z"}
+{"epoch": 32, "step": 21900, "loss": 1.3425482511520386, "acc": 0.890625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:03:29.395027Z"}
+{"epoch": 32, "step": 22000, "loss": 1.2998584508895874, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:04:57.100313Z"}
+{"epoch": 32, "step": 22100, "loss": 1.224288821220398, "acc": 0.90625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:06:25.977337Z"}
+{"epoch": 32, "step": 22200, "loss": 1.159116268157959, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:07:51.929855Z"}
+{"epoch": 32, "step": 22300, "loss": 1.1191946268081665, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:09:16.056949Z"}
+{"epoch": 32, "step": 22400, "loss": 1.3202751874923706, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:10:39.510169Z"}
+{"epoch": 32, "step": 22500, "loss": 1.1976521015167236, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:12:07.403689Z"}
+{"epoch": 32, "step": 22528, "val_loss": 2.1885239006597783, "val_acc": 0.6099683544303798, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:12:54.682985Z"}
+{"epoch": 33, "step": 22600, "loss": 1.1545307636260986, "acc": 0.890625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:13:58.922352Z"}
+{"epoch": 33, "step": 22700, "loss": 1.0755869150161743, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:15:26.262960Z"}
+{"epoch": 33, "step": 22800, "loss": 1.2269667387008667, "acc": 0.90625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:17:29.083311Z"}
+{"epoch": 33, "step": 22900, "loss": 1.1101027727127075, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:19:02.771257Z"}
+{"epoch": 33, "step": 23000, "loss": 1.1360806226730347, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:20:15.092107Z"}
+{"epoch": 33, "step": 23100, "loss": 1.2138383388519287, "acc": 0.90625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:21:23.629827Z"}
+{"epoch": 33, "step": 23200, "loss": 1.1877872943878174, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:22:36.848888Z"}
+{"epoch": 33, "step": 23232, "val_loss": 2.186336153670202, "val_acc": 0.6087816455696202, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:23:14.888357Z"}
+{"epoch": 34, "step": 23300, "loss": 1.2335920333862305, "acc": 0.875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:24:01.261608Z"}
+{"epoch": 34, "step": 23400, "loss": 1.205223798751831, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:25:07.843304Z"}
+{"epoch": 34, "step": 23500, "loss": 1.19532310962677, "acc": 0.890625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:26:12.816820Z"}
+{"epoch": 34, "step": 23600, "loss": 1.2312228679656982, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:27:17.497871Z"}
+{"epoch": 34, "step": 23700, "loss": 1.1582634449005127, "acc": 0.90625, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:28:22.288499Z"}
+{"epoch": 34, "step": 23800, "loss": 1.1098072528839111, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:29:27.064999Z"}
+{"epoch": 34, "step": 23900, "loss": 1.1359186172485352, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:30:32.290856Z"}
+{"epoch": 34, "step": 23936, "val_loss": 2.1903039745137662, "val_acc": 0.6125395569620253, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:31:10.139681Z"}
+{"epoch": 35, "step": 24000, "loss": 1.2173117399215698, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:31:52.474588Z"}
+{"epoch": 35, "step": 24100, "loss": 1.175529956817627, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:32:57.338121Z"}
+{"epoch": 35, "step": 24200, "loss": 1.1901921033859253, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:34:02.448042Z"}
+{"epoch": 35, "step": 24300, "loss": 1.1156069040298462, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:35:08.205866Z"}
+{"epoch": 35, "step": 24400, "loss": 1.0890806913375854, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:36:13.204934Z"}
+{"epoch": 35, "step": 24500, "loss": 1.143060326576233, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:37:17.968247Z"}
+{"epoch": 35, "step": 24600, "loss": 1.101037621498108, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:38:22.169568Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb1111d7920> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_35."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_35.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.020033s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 108 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.118349s (batch_requests_ready=0.047714s, total_serialization_initiated=0.043931s, others=0.026704s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.171701s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_35."}
+{"epoch": 35, "step": 24640, "val_loss": 2.183525858046133, "val_acc": 0.6101661392405063, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:39:03.468770Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_35.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 1.523476s (commit=1.438379s, array_metadata_write=0.085097s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: a second) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 1.481318s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.503635s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_35.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_35.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_35"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_35`."}
+{"event": "Finished async_save (blocking + background). Time taken: 2.332607s. directory=/work/hw04/checkpoints/best_state_epoch_35"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 2.157806s."}
+{"epoch": 36, "step": 24700, "loss": 1.1493475437164307, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:39:46.613112Z"}
+{"epoch": 36, "step": 24800, "loss": 1.052809476852417, "acc": 1.0, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:40:51.958300Z"}
+{"epoch": 36, "step": 24900, "loss": 1.1443712711334229, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:41:56.724510Z"}
+{"epoch": 36, "step": 25000, "loss": 1.1680887937545776, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:43:01.683060Z"}
+{"epoch": 36, "step": 25100, "loss": 1.046405553817749, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:44:06.523004Z"}
+{"epoch": 36, "step": 25200, "loss": 1.108978033065796, "acc": 0.984375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:45:11.612335Z"}
+{"epoch": 36, "step": 25300, "loss": 1.1530439853668213, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:46:16.094626Z"}
+{"epoch": 36, "step": 25344, "val_loss": 2.197526878948453, "val_acc": 0.6176819620253164, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:46:58.679913Z"}
+{"epoch": 37, "step": 25400, "loss": 1.1704325675964355, "acc": 0.859375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:47:36.459635Z"}
+{"epoch": 37, "step": 25500, "loss": 1.1167676448822021, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:48:42.385119Z"}
+{"epoch": 37, "step": 25600, "loss": 1.0799278020858765, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:49:47.489405Z"}
+{"epoch": 37, "step": 25700, "loss": 1.1822049617767334, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:50:52.993758Z"}
+{"epoch": 37, "step": 25800, "loss": 1.1135326623916626, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:51:57.312584Z"}
+{"epoch": 37, "step": 25900, "loss": 1.154274582862854, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:53:01.723983Z"}
+{"epoch": 37, "step": 26000, "loss": 1.1242233514785767, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:54:06.528450Z"}
+{"epoch": 37, "step": 26048, "val_loss": 2.1875499139858197, "val_acc": 0.6149129746835443, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:54:52.045278Z"}
+{"epoch": 38, "step": 26100, "loss": 1.229888677597046, "acc": 0.921875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:55:26.550565Z"}
+{"epoch": 38, "step": 26200, "loss": 1.1120091676712036, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:56:31.576262Z"}
+{"epoch": 38, "step": 26300, "loss": 1.0652694702148438, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:57:36.076084Z"}
+{"epoch": 38, "step": 26400, "loss": 1.1503782272338867, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:58:40.800477Z"}
+{"epoch": 38, "step": 26500, "loss": 1.1784155368804932, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T08:59:46.975378Z"}
+{"epoch": 38, "step": 26600, "loss": 1.0750794410705566, "acc": 1.0, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:00:52.154113Z"}
+{"epoch": 38, "step": 26700, "loss": 1.0573521852493286, "acc": 0.984375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:01:57.267012Z"}
+{"epoch": 38, "step": 26752, "val_loss": 2.171840216540083, "val_acc": 0.6220332278481012, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:02:46.707634Z"}
+{"epoch": 39, "step": 26800, "loss": 1.102884292602539, "acc": 0.984375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:03:18.385476Z"}
+{"epoch": 39, "step": 26900, "loss": 1.0885170698165894, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:04:24.209089Z"}
+{"epoch": 39, "step": 27000, "loss": 1.1531431674957275, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:05:31.999864Z"}
+{"epoch": 39, "step": 27100, "loss": 1.1302543878555298, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:06:36.316618Z"}
+{"epoch": 39, "step": 27200, "loss": 1.085768699645996, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:07:41.352543Z"}
+{"epoch": 39, "step": 27300, "loss": 1.1039751768112183, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:08:46.144319Z"}
+{"epoch": 39, "step": 27400, "loss": 1.115048885345459, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:09:54.427156Z"}
+{"epoch": 39, "step": 27456, "val_loss": 2.1635287939747676, "val_acc": 0.6218354430379747, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:10:44.956816Z"}
+{"epoch": 40, "step": 27500, "loss": 1.0619467496871948, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:11:14.827396Z"}
+{"epoch": 40, "step": 27600, "loss": 1.1036927700042725, "acc": 0.9375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:12:19.243397Z"}
+{"epoch": 40, "step": 27700, "loss": 1.0510609149932861, "acc": 0.984375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:13:24.145432Z"}
+{"epoch": 40, "step": 27800, "loss": 1.135082483291626, "acc": 0.953125, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:14:30.043950Z"}
+{"epoch": 40, "step": 27900, "loss": 1.1173350811004639, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:15:35.166016Z"}
+{"epoch": 40, "step": 28000, "loss": 1.1025875806808472, "acc": 0.96875, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:16:40.476461Z"}
+{"epoch": 40, "step": 28100, "loss": 1.0285465717315674, "acc": 0.984375, "event": "train_iter", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:17:44.524453Z"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7fb0d2ad2d90>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7fb050280180> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "[process=0] Started async saving checkpoint to /work/hw04/checkpoints/best_state_epoch_40."}
+{"event": "Creating tmp directory /work/hw04/checkpoints/best_state_epoch_40.orbax-checkpoint-tmp"}
+{"event": "Transferring arrays to host memory with options: use_replica_parallel=True, min_slice_bytes_for_replica_parallel=None, max_replicas_for_replica_parallel=None, enable_pinned_host_transfer=False"}
+{"event": "[process=0][thread=MainThread] Initiated \"orbax.checkpoint._src.serialization.type_handlers.ArrayHandler\".serialize. Time taken: 0.025649s"}
+{"event": "[process=0] /jax/checkpoint/write/blocking_gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 301 milliseconds) (per-host)"}
+{"event": "[process=0][thread=MainThread] Initiated Pytree async_save. Time taken: 0.303701s (batch_requests_ready=0.013434s, total_serialization_initiated=0.284863s, others=0.005404s)"}
+{"event": "[process=0][thread=async_save] Background save thread started."}
+{"event": "Finished blocking save. Time taken: 0.342879s. Continuing background save to /work/hw04/checkpoints/best_state_epoch_40."}
+{"epoch": 40, "step": 28160, "val_loss": 2.158977393862567, "val_acc": 0.6214398734177216, "event": "epoch_summary", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:18:38.831492Z"}
+{"event": "Training finished. Generating final plots...", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T09:18:38.836323Z"}
+{"event": "[process=0][thread=array_type_handler] Wrote 138 array_metadata.ArrayMetadata to /work/hw04/checkpoints/best_state_epoch_40.orbax-checkpoint-tmp/array_metadatas/process_0"}
+{"event": "[process=0][thread=write_metadata_after_commits] Commit + Array metadata written. Time taken: 1.119719s (commit=1.103830s, array_metadata_write=0.015889s)"}
+{"event": "[process=0] /jax/checkpoint/write/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: a second) (per-host)"}
+{"event": "[process=0][thread=async_save] 2 Handler Commit operations completed. Time taken: 1.095179s."}
+{"event": "[process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0."}
+{"event": "[process=0][thread=async_save] Pytree save finalize (merge_ocdbt + ArrayMetadata validation) completed. Time taken: 0.031279s. use_zarr3=False, enable_post_merge_validation=True, directory=/work/hw04/checkpoints/best_state_epoch_40.orbax-checkpoint-tmp"}
+{"event": "Renaming /work/hw04/checkpoints/best_state_epoch_40.orbax-checkpoint-tmp to /work/hw04/checkpoints/best_state_epoch_40"}
+{"event": "[process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/work/hw04/checkpoints/best_state_epoch_40`."}
+{"event": "Finished async_save (blocking + background). Time taken: 1.509509s. directory=/work/hw04/checkpoints/best_state_epoch_40"}
+{"event": "[process=0][thread=async_save] Background save thread done. Time taken: 1.140634s."}
+{"num_params": 5352484, "event": "Model created", "logger": "hw04", "level": "info", "timestamp": "2025-10-08T19:58:42.569048Z"}
+{"event": "Starting final testing...", "logger": "hw04", "level": "info", "timestamp": "2025-10-08T19:58:42.898115Z"}
+{"event": "orbax-checkpoint version: 0.11.25"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7f589abd6790>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID."}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7f5816f520c0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "Restoring checkpoint from /work/hw04/checkpoints/best_state_epoch_40."}
+{"event": "[process=0] /jax/checkpoint/read/gbytes_per_sec: 0 Bytes/s (total gbytes: 20.4 MiB) (time elapsed: 549 milliseconds) (per-host)"}
+{"event": "Finished restoring checkpoint in 0.56 seconds from /work/hw04/checkpoints/best_state_epoch_40."}
+{"test_loss": 2.175596616830036, "test_acc": 0.6136544585987261, "event": "test_results", "logger": "hw04.training", "level": "info", "timestamp": "2025-10-08T19:59:12.667384Z"}
+{"test_loss": 2.175596616830036, "test_acc": 0.6136544585987261, "event": "Final Test Results", "logger": "hw04", "level": "info", "timestamp": "2025-10-08T19:59:12.705750Z"}
