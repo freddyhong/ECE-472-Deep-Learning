@@ -1,0 +1,13 @@
+{"settings": {"debug": false, "random_seed": 31415, "model": {"num_classes": 4, "embed_dim": 128, "conv_features": 64, "kernel_size": 5, "dropout_rate": 0.3}, "data": {"validation_percentage": 0.1, "batch_size": 256, "max_length": 128}, "training": {"num_epochs": 7, "learning_rate": 0.0005, "weight_decay": 0.0001, "log_interval": 100, "final_test": true, "checkpoint_dir": "PosixPath('hw05/checkpoints')"}, "plotting": {"output_dir": "PosixPath('hw05/artifacts')", "figsize": [5, 3], "dpi": 200}}, "event": "Settings loaded", "logger": "hw05", "level": "info", "timestamp": "2025-10-16T00:29:50.742484Z"}
+{"event": "Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"}
+{"num_params": 3948100, "event": "Model created", "logger": "hw05", "level": "info", "timestamp": "2025-10-16T00:30:09.960559Z"}
+{"event": "Starting final testing...", "logger": "hw05", "level": "info", "timestamp": "2025-10-16T00:30:10.044023Z"}
+{"event": "orbax-checkpoint version: 0.11.25"}
+{"event": "Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7f34c9d01790>, enable_pinned_host_transfer=False, save_concurrent_bytes: 96000000000 (89.4 GiB), restore_concurrent_bytes: 96000000000 (89.4 GiB)"}
+{"event": "[thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID."}
+{"event": "[process=0][thread=MainThread] Using barrier_sync_fn: <function get_barrier_sync_fn.<locals>.<lambda> at 0x7f345c30f4c0> timeout: 600 secs and primary_host=0 for async checkpoint writes"}
+{"event": "Restoring checkpoint from /work/hw05/checkpoints/best_state_epoch_5."}
+{"event": "[process=0] /jax/checkpoint/read/gbytes_per_sec: 0 Bytes/s (total gbytes: 15.1 MiB) (time elapsed: 185 milliseconds) (per-host)"}
+{"event": "Finished restoring checkpoint in 0.20 seconds from /work/hw05/checkpoints/best_state_epoch_5."}
+{"test_loss": 0.5386621763308843, "test_acc": 0.9197916666666667, "event": "test_results", "logger": "hw05.training", "level": "info", "timestamp": "2025-10-16T00:30:11.412115Z"}
+{"test_loss": 0.5386621763308843, "test_acc": 0.9197916666666667, "event": "Final Test Results", "logger": "hw05", "level": "info", "timestamp": "2025-10-16T00:30:11.412709Z"}

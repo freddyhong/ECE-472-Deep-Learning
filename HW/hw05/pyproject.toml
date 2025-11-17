@@ -1,0 +1,34 @@
+# pyproject.toml.jinja
+
+[project]
+name = "hw05"
+version = "0.1.0"
+description = "AG News Classification"
+readme = "README.md"
+authors = [
+    { name = "Wongee (Freddy) Hong", email = "wongee.hong@cooper.edu" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "structlog",
+    "numpy",
+    "tensorflow",
+    "tensorflow_datasets",
+    "pydantic-settings",
+    "matplotlib",
+    "tqdm",
+    "jax",
+    "jaxlib",
+    "flax",
+    "optax",
+    "scikit-learn",
+    "transformers",
+    "datasets",
+]
+
+[project.scripts]
+hw05 = "hw05:main"
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"
